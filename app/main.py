@@ -1,7 +1,7 @@
 import bottle
 import os
 import random
-
+import movesnake
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -26,7 +26,7 @@ def start():
         'color': '#00FF00',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        'name': 'snakehack-python'
+        'name': 'Jarmin_v2'
     }
 
 
@@ -38,8 +38,8 @@ def move():
     directions = ['up', 'down', 'left', 'right']
 
     return {
-        'move': random.choice(directions),
-        'taunt': 'snakehack-python!'
+        'move': movesnake.moveSnake(),
+        'taunt': 'dont snake with me'
     }
 
 

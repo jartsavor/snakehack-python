@@ -4,4 +4,4 @@ def moveSnake():
 
  directions = ['up', 'down', 'left', 'right']
 
-motion = random.choice(directions)  
+ return directions[1]
