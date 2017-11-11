@@ -39,7 +39,7 @@ def move():
 
     return {
         # 'move': random.choice(directions),
-        'move': moveSnake()
+        'move': moveSnake.moveSnake()
         'taunt': "can't snake us!"
     }
 
