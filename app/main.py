@@ -1,7 +1,7 @@
 import bottle
 import os
 import random
-import moveSnake
+import snake
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -23,10 +23,10 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#00FF00',
+        'color': '#7F3FBF',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        'name': 'snakehack-python'
+        'name': 'Jarmin'
     }
 
 
@@ -37,12 +37,11 @@ def move():
     # TODO: Do things with data
     # directions = ['up', 'down', 'left', 'right']
 
-    return snake() 
-    # {
-    #     # 'move': random.choice(directions),
-    #     'move': moveSnake()
-    #     'taunt': 'snakehack-python!'
-    # }
+    return {
+        # 'move': random.choice(directions),
+        'move': moveSnake()
+        'taunt': "can't snake us!"
+    }
 
 
 # Expose WSGI app (so gunicorn can find it)
