@@ -2,6 +2,6 @@ import random
 
 def moveSnake():
 
- directions = ['up', 'down', 'left', 'right']
-
- return directions[1]
+    directions = ['up', 'down', 'left', 'right']
+    
+    return random.choice(directions)  
