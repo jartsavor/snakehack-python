@@ -1,11 +1,7 @@
 import bottle
 import os
 import random
-<<<<<<< HEAD
-import snake
-=======
 import movesnake
->>>>>>> 58a1a6cdeff865ccdd49762e989c8e5c2a319d48
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -30,6 +26,8 @@ def start():
         'color': '#7F3FBF',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
+        'head_type':'tongue',
+        'tail_type':'curled',
         'name': 'Jarmin'
     }
 
